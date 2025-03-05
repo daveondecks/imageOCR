@@ -5,6 +5,15 @@ import numpy as np
 import pandas as pd
 from PIL import Image
 import re
+import pytesseract
+import shutil
+
+# Check if Tesseract is installed
+tesseract_cmd = shutil.which("tesseract")
+if tesseract_cmd:
+    pytesseract.pytesseract.tesseract_cmd = tesseract_cmd
+else:
+    st.error("❌ Tesseract OCR is not installed. Please install it first.")
 
 # Set up OCR settings
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'  # Update for Windows users
