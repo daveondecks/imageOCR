@@ -65,7 +65,7 @@ if image_file or uploaded_file:
     else:
         image = Image.open(uploaded_file)
     
-    st.image(image, caption="📸 Uploaded Receipt", use_column_width=True)
+    st.image(image, caption="📸 Uploaded Receipt", use_container_width=True)
 
     # Process OCR
     vendor, date, amount, ocr_text = process_receipt(image)
