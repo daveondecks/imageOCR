@@ -1,0 +1,6 @@
+numpy==2.2.3
+opencv_python_headless==4.11.0.86
+pandas==2.2.3
+Pillow==11.1.0
+pytesseract==0.3.13
+streamlit==1.42.2
